@@ -6,7 +6,7 @@
 /*   By: jinwkim <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/13 14:05:53 by jinwkim           #+#    #+#             */
-/*   Updated: 2020/11/13 16:28:56 by jinwkim          ###   ########.fr       */
+/*   Updated: 2020/11/13 17:05:50 by jinwkim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -244,12 +244,15 @@ void	clean_cmd(t_cmd **head)
 {
 	t_cmd	*node;
 	t_cmd	*old;
+	int		cnt;
 
 	node = *head;
 	while (node)
 	{
 		old = node;
 		node = node->next;
+		cnt = 0;
+		free(old->args);
 		free(old);
 	}
 }
