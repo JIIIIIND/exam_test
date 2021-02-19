@@ -1,2 +1,2 @@
-# exam_rank_04
-exam_rank_04 연습용
+# exam_rank
+exam_rank 연습용
